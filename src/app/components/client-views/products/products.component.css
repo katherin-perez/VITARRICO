@@ -1,0 +1,14 @@
+.products-container{
+    margin-bottom: -100px;
+}
+
+.product-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card{
+    background-color: #FFF7EB;
+    margin-top: 20px;
+}

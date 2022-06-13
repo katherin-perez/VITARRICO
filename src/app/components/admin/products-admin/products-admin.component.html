@@ -1,0 +1,23 @@
+<div class="products-admin-container">
+    <div class="products-admin-title-bar">
+        <h1>PRODUCTOS</h1>
+        <button mat-raised-button>AGREGAR PRODUCTO</button>
+    </div>
+    <div class="products-admin-content">
+        <div class="product-admin-cards">
+            <div class="card-admin" *ngFor="let product of productsList">
+                <img src={{product.image}} class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3>{{product.name}}</h3>
+                    <p>{{product.category}}</p>
+                    <p>{{product.barcode}}</p>
+                    <p>{{product.price}}</p>
+                </div>
+                <div class="card-btn">
+                    <button mat-raised-button (click)="deleteProduct(product._id)">Eliminar</button>
+                    <button mat-raised-button (click)="editProduct()">Editar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

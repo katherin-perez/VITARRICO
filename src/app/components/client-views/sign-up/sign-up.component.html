@@ -1,0 +1,52 @@
+<div class="cont">
+  <h1>Registrarse</h1>
+  <form [formGroup]="formSignUp" novalidate (ngSubmit)="signUp($event)">
+
+    <div class="inputs">
+      <input type="text" formControlName="name" placeholder="Nombres">
+      <div class="error" *ngIf="formSignUp.get('name')?.errors && formSignUp.get('name')?.touched">
+        <p *ngIf="formSignUp.get('name')?.hasError('required')">Este campo es requerido</p>
+      </div>
+    </div>
+
+    <div class="inputs">
+      <input type="text" formControlName="last_name" placeholder="Apellidos">
+      <div class="error" *ngIf="formSignUp.get('last_name')?.errors && formSignUp.get('last_name')?.touched">
+        <p *ngIf="formSignUp.get('last_name')?.hasError('required')">Este campo es requerido</p>
+      </div>
+    </div>
+
+    <div class="inputs">
+      <input type="email" formControlName="mail" placeholder="Correo electrónico">
+      <div class="error" *ngIf="formSignUp.get('mail')?.errors && formSignUp.get('mail')?.touched">
+        <p *ngIf="formSignUp.get('mail')?.hasError('required')">Este campo es requerido</p>
+        <p *ngIf="formSignUp.get('mail')?.hasError('email')">Se requiere una dirección de correo electrónico válida</p>
+      </div>
+    </div>
+
+    <div class="inputs">
+      <input type="password" formControlName="password" placeholder="Contraseña">
+      <div class="error" *ngIf="formSignUp.get('password')?.errors && formSignUp.get('password')?.touched">
+        <p *ngIf="formSignUp.get('password')?.hasError('required')">Este campo es requerido</p>
+        <p *ngIf="formSignUp.get('password')?.hasError('minlength')">Se requiere como mínimo 8 caracteres</p>
+      </div>
+    </div>
+    
+    <div class="inputs">
+      <input type="number" formControlName="document" placeholder="Documento">
+      <div class="error" *ngIf="formSignUp.get('document')?.errors && formSignUp.get('document')?.touched">
+        <p *ngIf="formSignUp.get('document')?.hasError('required')">Este campo es requerido</p>
+      </div>
+    </div>
+
+    <div class="inputs">
+      <input type="number" formControlName="phone" placeholder="Telefono">
+      <div class="error" *ngIf="formSignUp.get('phone')?.errors && formSignUp.get('phone')?.touched">
+        <p *ngIf="formSignUp.get('phone')?.hasError('required')">Este campo es requerido</p>
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="formSignUp.invalid">Guardar</button>
+
+  </form>
+</div>

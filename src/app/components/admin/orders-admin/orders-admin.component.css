@@ -1,0 +1,81 @@
+* button {
+    background-color: #FFC43F;
+}
+
+.orders-admin-title-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #774937;
+    margin: 15px 0;
+}
+
+.orders-admin-title-bar h1 {
+    color: white;
+    margin-left: 80px;
+}
+
+.orders-admin-title-bar button, h1{
+    margin: 8px 24px;
+}
+
+.orders-admin-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 100%;
+    height: fit-content;
+    justify-content: space-evenly;
+}
+
+.orders-admin-cards {
+    margin: 16px;
+}
+
+mat-card {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px;
+    margin-bottom: 10px;
+}
+
+mat-card h3,
+h4 {
+    text-align: center;
+}
+
+mat-card button {
+    margin: 4px;
+    width: fit-content;
+}
+
+.info-order {
+    display: flex;
+    flex-direction: row;
+}
+
+.info-order h3{
+    margin: 0 20px;
+}
+
+.products-list h5{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.opt-btn {
+    display: flex;
+    flex-direction: column;
+}
+
+.forms-orders-admin {
+    border: 2px solid gainsboro;
+    margin: 16px;
+    padding: 16px;
+    width: fit-content;
+}

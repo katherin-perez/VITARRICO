@@ -1,0 +1,26 @@
+* {
+    font-family: 'Libre Bodoni', serif;
+    font-size: medium;
+} 
+
+li{
+    margin: 0px 15px;
+}
+
+.bg-navbar{
+    background-color: #FAA04B;
+}
+
+.navbar a{
+    color: black;
+}
+
+.navbar-logo{
+    max-height: 65px;
+    margin-left: 20px;
+}
+
+.orientation{
+    justify-content: flex-end;
+}
+

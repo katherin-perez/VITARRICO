@@ -1,0 +1,84 @@
+<div class="providers-admin-container">
+    <div class="providers-admin-title-bar">
+        <h1>PROVEEDORES</h1>
+        <button mat-raised-button (click)="newProvider()">NUEVO PROVEEDOR</button>
+    </div>
+    <div class="providers-admin-content">
+
+        <div class="providers-cards-container">
+
+            <div class="provider-admin-cards" *ngFor="let provider of PROVIDERS">
+                <mat-card>
+                    <img mat-card-sm-image src="/assets/media/profile/user-profile.png" alt="provider-admin-img">
+                    <div class="info-user">
+                        <h3>{{provider.name}}</h3>
+                    </div>
+                    <h5>{{provider.mail}}</h5>
+                    <div class="opt-btn">
+                        <button mat-raised-button (click)="showProviderDetails()">Ver Detalles</button>
+                        <button mat-raised-button (click)="deleteProvider(provider._id)">Eliminar</button>
+                    </div>
+                </mat-card>
+            </div>
+
+        </div>
+
+        <div class="forms-providers-admin">
+            <div class="user-profile-form" *ngIf="!createProviderFlag">
+                <form [formGroup]="formUpdateInfoUser" novalidate>
+                    <h1>Editar Proveedor</h1>
+                    <div class="inputs">
+                        <input type="text" formControlName="name" placeholder="Nombre">
+                    </div>
+
+                    <div class="inputs">
+                        <input type="number" formControlName="direction" placeholder="Dirección">
+                    </div>
+
+                    <div class="inputs">
+                        <input type="number" formControlName="phone" placeholder="Telefono">
+                    </div>
+
+                    <div class="inputs">
+                        <input type="email" formControlName="mail" placeholder="Correo electrónico">
+                        <div class="error"
+                            *ngIf="formUpdateInfoUser.get('mail')?.errors && formUpdateInfoUser.get('mail')?.touched">
+                            <p *ngIf="formUpdateInfoUser.get('mail')?.hasError('email')">Se requiere una dirección de
+                                correo electrónico válida</p>
+                        </div>
+                    </div>
+                    
+                    <button mat-raised-button (click)="updateProvider()">Guardar Cambios</button>
+                </form>
+            </div>
+
+            <div class="create-user-form" *ngIf="createProviderFlag">
+                <form [formGroup]="formUpdateInfoUser" novalidate>
+                    <h1>Crear Proveedor</h1>
+                    <div class="inputs">
+                        <input type="text" formControlName="name" placeholder="Nombre">
+                    </div>
+
+                    <div class="inputs">
+                        <input type="number" formControlName="direction" placeholder="Dirección">
+                    </div>
+
+                    <div class="inputs">
+                        <input type="number" formControlName="phone" placeholder="Telefono">
+                    </div>
+
+                    <div class="inputs">
+                        <input type="email" formControlName="mail" placeholder="Correo electrónico">
+                        <div class="error"
+                            *ngIf="formUpdateInfoUser.get('mail')?.errors && formUpdateInfoUser.get('mail')?.touched">
+                            <p *ngIf="formUpdateInfoUser.get('mail')?.hasError('email')">Se requiere una dirección de
+                                correo electrónico válida</p>
+                        </div>
+                    </div>
+
+                    <button mat-raised-button (click)="createProvider()">Crear Proveedor</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

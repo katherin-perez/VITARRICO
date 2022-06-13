@@ -1,0 +1,93 @@
+.shopping-car-container{
+    margin-bottom: -100px;
+}
+.shopping-car-title {
+    width: 100%;
+    height: fit-content;
+    background-color: #774937;
+    text-align: center;
+}
+
+.shopping-car-title h1 {
+    margin: 18px 0;
+    color: white;
+}
+
+.shopping-car-content{
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: 70% 30%;
+}
+
+.products-cards{
+    margin: 16px;
+}
+
+.shopping-car-category{
+    padding: 0;
+    display: grid;
+    grid-template-columns: auto auto 130px 100px 130px 70px;
+}
+
+mat-card {
+    display: grid;
+    grid-template-columns: 120px auto 130px 100px 130px 70px;
+    align-items: center;
+    justify-items: center;
+    padding: 10px 0;
+    margin-top: 1rem;
+}
+
+mat-card-title {
+    width: max-content;
+    margin: 0;
+}
+
+mat-card h6{
+    text-align: center;
+}
+
+mat-card input {
+    width: 50px;
+    height: 30px;
+}
+
+.img-trash-can {
+    max-width: fit-content;
+    padding: 5px;
+    background-color: #FAA04B;
+    border-radius: 5px;
+}
+
+.img-trash-can img{
+    max-width: 25px;
+    max-height: 25px;
+}
+
+.total-price-card{
+    border: 2px solid gainsboro;
+    margin: 68px 16px 16px 16px;
+    max-height: 150px;
+}
+
+.total-price-card button{
+    background-color: #FAA04B;
+    border-color: #FAA04B;
+    border-radius: 10px;
+    padding: 6px;
+    margin: -20px -50px; 
+    position:relative;
+    top:25%; 
+    left:45%;    
+}
+
+.total-value{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    justify-content: space-around;
+}
+
+.total-value h5{
+    margin-top: 5px;
+}

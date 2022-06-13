@@ -1,0 +1,12 @@
+<div>
+    <h1>Iniciar Sesión</h1>
+    <form [formGroup]="formSignIn" novalidate (ngSubmit)="singIn($event)">
+        <p>
+            <input type="email" formControlName="mail" placeholder="Correo electrónico">
+        </p>
+        <p>
+            <input type="password" formControlName="password" placeholder="Contraseña">
+        </p>
+        <button type="submit" [disabled]="formSignIn.invalid">Inciar Sesión</button>
+    </form>
+</div>

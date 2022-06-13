@@ -1,0 +1,61 @@
+.products-admin-container button{
+    background-color: #FFC43F;
+    margin: 8px 24px;
+}
+
+.products-admin-title-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #774937;
+    margin: 15px 0;
+}
+
+.products-admin-title-bar h1{
+    margin: 8px 24px;
+}
+
+.products-admin-title-bar h1{
+    color: white;
+    margin-left: 80px;
+}
+
+.product-admin-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    min-height: fit-content;
+}
+
+.card-admin{
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF7EB;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    width: 17rem;
+    margin: 12px;
+}
+
+.card-body{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    justify-content: center;
+    align-items: end;
+    padding: 0 16px 0 16px;
+    align-content: stretch; 
+}
+
+.card-body h3, p{
+    margin: 6px 0 6px 0;
+    text-align: center;
+}
+
+.card-btn{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 6px 0;
+}

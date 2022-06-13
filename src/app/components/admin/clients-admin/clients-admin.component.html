@@ -1,0 +1,139 @@
+<div class="clients-admin-container">
+    <div class="clients-admin-title-bar">
+        <h1>USUARIOS</h1>
+        <button mat-raised-button (click)="newUser()">NUEVO USUARIO</button>
+    </div>
+    <div class="clients-admin-content">
+
+        <div class="clients-admin-cards">
+            <mat-card *ngFor="let user of USERS">
+                <img mat-card-sm-image src="/assets/media/profile/user-profile.png" alt="client-admin-img">
+                <div class="info-user">
+                    <h3>{{user.name}}</h3>
+                    <h4>{{user.last_name}}</h4>
+                </div>
+                <h5>{{user.mail}}</h5>
+                <div class="opt-btn">
+                    <button mat-raised-button (click)="showUserDetails(user._id)">Ver Detalles</button>
+                    <button mat-raised-button (click)="deleteUser(user._id)">Eliminar</button>
+                </div>
+            </mat-card>
+        </div>
+
+        <div class="forms-clients-admin">
+            <div class="user-profile-form" *ngIf="!createUserFlag">
+                <form [formGroup]="formUpdateInfoUser" novalidate>
+
+                    <h1>Editar Perfil</h1>
+                    <div class="inputs">
+                        <input type="text" formControlName="name" placeholder="Nombres">
+                        <div class="error"
+                            *ngIf="formUpdateInfoUser.get('name')?.errors && formUpdateInfoUser.get('name')?.touched">
+                            <p *ngIf="formUpdateInfoUser.get('name')?.hasError('required')">Este campo es requerido</p>
+                        </div>
+                    </div>
+
+                    <div class="inputs">
+                        <input type="text" formControlName="last_name" placeholder="Apellidos">
+                        <div class="error"
+                            *ngIf="formUpdateInfoUser.get('last_name')?.errors && formUpdateInfoUser.get('last_name')?.touched">
+                            <p *ngIf="formUpdateInfoUser.get('last_name')?.hasError('required')">Este campo es requerido
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="inputs">
+                        <input type="email" formControlName="mail" placeholder="Correo electrónico">
+                        <div class="error"
+                            *ngIf="formUpdateInfoUser.get('mail')?.errors && formUpdateInfoUser.get('mail')?.touched">
+                            <p *ngIf="formUpdateInfoUser.get('mail')?.hasError('required')">Este campo es requerido</p>
+                            <p *ngIf="formUpdateInfoUser.get('mail')?.hasError('email')">Se requiere una dirección de
+                                correo electrónico válida</p>
+                        </div>
+                    </div>
+
+                    <div class="inputs">
+                        <input type="number" formControlName="document" placeholder="Documento">
+                        <div class="error"
+                            *ngIf="formUpdateInfoUser.get('document')?.errors && formUpdateInfoUser.get('document')?.touched">
+                            <p *ngIf="formUpdateInfoUser.get('document')?.hasError('required')">Este campo es requerido
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="inputs">
+                        <input type="number" formControlName="phone" placeholder="Telefono">
+                        <div class="error"
+                            *ngIf="formUpdateInfoUser.get('phone')?.errors && formUpdateInfoUser.get('phone')?.touched">
+                            <p *ngIf="formUpdateInfoUser.get('phone')?.hasError('required')">Este campo es requerido</p>
+                        </div>
+                    </div>
+
+                    <button mat-raised-button (click)="updateInfoClient()">Guardar Cambios</button>
+                </form>
+            </div>
+
+            <div class="create-user-form" *ngIf="createUserFlag">
+                <form [formGroup]="formUpdateInfoUser" novalidate>
+                    <h1>Crear Usuario</h1>
+                    <div class="inputs">
+                        <input type="text" formControlName="name" placeholder="Nombres">
+                        <div class="error"
+                            *ngIf="formUpdateInfoUser.get('name')?.errors && formUpdateInfoUser.get('name')?.touched">
+                            <p *ngIf="formUpdateInfoUser.get('name')?.hasError('required')">Este campo es requerido</p>
+                        </div>
+                    </div>
+
+                    <div class="inputs">
+                        <input type="text" formControlName="last_name" placeholder="Apellidos">
+                        <div class="error"
+                            *ngIf="formUpdateInfoUser.get('last_name')?.errors && formUpdateInfoUser.get('last_name')?.touched">
+                            <p *ngIf="formUpdateInfoUser.get('last_name')?.hasError('required')">Este campo es requerido
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="inputs">
+                        <input type="email" formControlName="mail" placeholder="Correo electrónico">
+                        <div class="error"
+                            *ngIf="formUpdateInfoUser.get('mail')?.errors && formUpdateInfoUser.get('mail')?.touched">
+                            <p *ngIf="formUpdateInfoUser.get('mail')?.hasError('required')">Este campo es requerido</p>
+                            <p *ngIf="formUpdateInfoUser.get('mail')?.hasError('email')">Se requiere una dirección de
+                                correo electrónico válida</p>
+                        </div>
+                    </div>
+
+                    <div class="inputs">
+                        <input type="password" formControlName="password" placeholder="Contraseña">
+                        <div class="error"
+                            *ngIf="formUpdateInfoUser.get('password')?.errors && formUpdateInfoUser.get('password')?.touched">
+                            <p *ngIf="formUpdateInfoUser.get('password')?.hasError('required')">Este campo es requerido
+                            </p>
+                            <p *ngIf="formUpdateInfoUser.get('password')?.hasError('minlength')">Se requiere como mínimo
+                                8 caracteres</p>
+                        </div>
+                    </div>
+
+                    <div class="inputs">
+                        <input type="number" formControlName="document" placeholder="Documento">
+                        <div class="error"
+                            *ngIf="formUpdateInfoUser.get('document')?.errors && formUpdateInfoUser.get('document')?.touched">
+                            <p *ngIf="formUpdateInfoUser.get('document')?.hasError('required')">Este campo es requerido
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="inputs">
+                        <input type="number" formControlName="phone" placeholder="Telefono">
+                        <div class="error"
+                            *ngIf="formUpdateInfoUser.get('phone')?.errors && formUpdateInfoUser.get('phone')?.touched">
+                            <p *ngIf="formUpdateInfoUser.get('phone')?.hasError('required')">Este campo es requerido</p>
+                        </div>
+                    </div>
+
+                    <button mat-raised-button (click)="createUser()">Crear Usuario</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

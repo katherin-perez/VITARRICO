@@ -1,0 +1,74 @@
+* {
+  text-align: center;
+  font-family: 'Rancho';
+}
+
+.profile-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-title {
+  width: 100%;
+  height: fit-content;
+  background-color: white;
+  margin: 2rem;
+}
+
+.profile-title h1{
+  margin: 12px 0;
+}
+
+.content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.profile-info{
+  padding: 0 4rem;
+}
+
+.profile-info img{
+  border-radius: 300px;
+}
+
+.profile-info h4{
+  margin: 10px;
+  padding: 10px;
+  text-align: left;
+  border: 2px solid grey;
+  border-radius: 2px;
+}
+
+.profile-form{
+  padding: 0 4rem;
+}
+
+form p {
+  width: 100%;
+  min-width: 500px;
+  position: relative;
+}
+
+form button {
+  background-color: #FFC43F;
+  color: black;
+  float: none;
+  width: 400px;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+form input {
+  width: 100%;
+  padding: 10px 5px;
+  border-radius: 6px;
+  border-color: gainsboro;
+  text-align: left;
+  margin-bottom: 15px;
+}

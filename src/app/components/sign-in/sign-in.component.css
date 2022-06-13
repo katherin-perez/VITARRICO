@@ -1,0 +1,46 @@
+* {
+  text-align: center;
+  font-family: 'Rancho';
+}
+
+:host {
+  display: flex;
+  justify-content: center;
+  margin: 100px 0;
+}
+
+div {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 4px;
+  height: 100%;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 2rem;
+}
+
+form p {
+  width: 100%;
+  min-width: 300px;
+  position: relative;
+}
+
+form button {
+  background-color: #FFC43F;
+  color: black;
+  width: max-content;
+  float: none;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+form input {
+  width: 100%;
+  padding: 10px 5px;
+  border-radius: 6px;
+  border-color: gainsboro;
+  text-align: left;
+  margin-bottom: 15px;
+}

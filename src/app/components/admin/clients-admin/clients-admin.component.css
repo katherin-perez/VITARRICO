@@ -1,0 +1,85 @@
+* button {
+    background-color: #FFC43F;
+}
+
+.clients-admin-title-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #774937;
+    margin: 15px 0;
+}
+
+.clients-admin-title-bar h1 {
+    color: white;
+    margin-left: 80px;
+}
+
+.clients-admin-title-bar button, h1{
+    margin: 8px 24px;
+}
+
+.clients-admin-content {
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: 70% 30%;
+    height: fit-content;
+}
+
+.clients-admin-cards {
+    margin: 16px;
+}
+
+mat-card {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px;
+    margin-bottom: 10px;
+}
+
+mat-card h3,
+h4 {
+    text-align: center;
+}
+
+mat-card button {
+    margin: 4px;
+}
+
+.opt-btn {
+    display: flex;
+    flex-direction: column;
+}
+
+.forms-clients-admin {
+    border: 2px solid gainsboro;
+    margin: 16px;
+    padding: 16px;
+    width: fit-content;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form p {
+    width: 100%;
+    min-width: 500px;
+    position: relative;
+}
+
+form input {
+    width: 380px;
+    padding: 10px;
+    border-radius: 6px;
+    border-color: gainsboro;
+    text-align: left;
+    margin-bottom: 15px;
+}

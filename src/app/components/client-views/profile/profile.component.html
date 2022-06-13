@@ -1,0 +1,53 @@
+<div class="profile-container">
+  <div class="profile-title">
+    <h1>MI CUENTA</h1>
+  </div>
+  
+  <div class="content">
+  
+    <div class="profile-info">
+      <img src="/assets/media/profile/user-profile.png" alt="user-profile">
+      <h4>Mis pedidos</h4>
+      <h4>Favoritos</h4>
+      <h4>Cerrar Sesión</h4>
+    </div>
+  
+    <div class="profile-form">
+      <h1>Editar Perfil</h1>
+      <form [formGroup]="formUpdateInfoUser" novalidate (ngSubmit)="updateInfoUser($event)">
+        <div class="inputs">
+          <input type="text" formControlName="name" placeholder="Nombres">
+          <div class="error" *ngIf="formUpdateInfoUser.get('name')?.errors && formUpdateInfoUser.get('name')?.touched">
+            <p *ngIf="formUpdateInfoUser.get('name')?.hasError('required')">Este campo es requerido</p>
+          </div>
+        </div>
+  
+        <div class="inputs">
+          <input type="text" formControlName="last_name" placeholder="Apellidos">
+          <div class="error"
+            *ngIf="formUpdateInfoUser.get('last_name')?.errors && formUpdateInfoUser.get('last_name')?.touched">
+            <p *ngIf="formUpdateInfoUser.get('last_name')?.hasError('required')">Este campo es requerido</p>
+          </div>
+        </div>
+  
+        <div class="inputs">
+          <input type="number" formControlName="document" placeholder="Documento">
+          <div class="error"
+            *ngIf="formUpdateInfoUser.get('document')?.errors && formUpdateInfoUser.get('document')?.touched">
+            <p *ngIf="formUpdateInfoUser.get('document')?.hasError('required')">Este campo es requerido</p>
+          </div>
+        </div>
+  
+        <div class="inputs">
+          <input type="number" formControlName="phone" placeholder="Telefono">
+          <div class="error" *ngIf="formUpdateInfoUser.get('phone')?.errors && formUpdateInfoUser.get('phone')?.touched">
+            <p *ngIf="formUpdateInfoUser.get('phone')?.hasError('required')">Este campo es requerido</p>
+          </div>
+        </div>
+  
+        <button type="submit">Guardar Cambios</button>
+      </form>
+  
+    </div>
+  </div>
+</div>
